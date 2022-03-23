@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Driving Game</title>
+	</head>
+	<body>
+        <div id = "first">
+		<center><h1>Welcome To Driving Simulator<br>Click Play To Begin</h1></center>
+        <center><button class="playgame"><a href="#" onClick="doSomething()"><p class="play"><u class = "playu">Play</u></p></a></button></center>
+        </div>
+        <div id = "second">
+            <script type="text/javascript">
+    //init object globally
+    var objImage = null;
+    function init() {
+        objImage = document.getElementById("image1");
+        objImage.style.position = "relative";
+        objImage.style.left = "0px";
+        objImage.style.top = "0px";
+    }
+    function getKeyAndMove(e) {
+        var key_code = e.which || e.keyCode;
+        switch (key_code) {
+            case 37: //left arrow key
+                moveLeft();
+                break;
+            case 38: //Up arrow key
+                moveUp();
+                break;
+            case 39: //right arrow key
+                moveRight();
+                break;
+            case 40: //down arrow key
+                moveDown();
+                break;
+        }
+    }
+    function moveLeft() {
+        objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
+    }
+    function moveUp() {
+        objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
+    }
+    function moveRight() {
+        objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
+    }
+    function moveDown() {
+        objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
+    }
+    window.onload = init;
+</script>
+    <body onkeydown="getKeyAndMove(event)">
+        <h1>Drive!!!</h1>
+        <h2>Use Arrow Keys</h2>
+        <img id="image1" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.freestockphotos.biz%2Fpictures%2F15%2F15685%2FIllustration%2Bof%2Ba%2Bred%2Bcartoon%2Bcar.png&f=1&nofb=1" alt="this is car :)" />
+        </div>
+        <script type="text/javascript">
+	        function doSomething() {
+	            document.getElementById("first").style.display = "none";
+                document.getElementById("second").style.display = "block";
+	        }
+	    </script>
+      <style>
+body {
+    background-color: #544c41;
+    text-align: center;
+}
+
+h1 {
+    color: #ccc0af;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    color: #ccc0af;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.playgame {
+    color:black;
+    border:solid 20px gray;
+    border-radius:23px;
+    font-family:'Times New Roman', Times, serif;
+    background-color:gray;
+    width:350px;
+    height:200px;
+    font-size:50px;  
+    margin-top: 175px;
+}
+
+#second {
+    display:none;
+}
+
+.play {
+    color: #ccc0af;
+}
+
+.playu {
+    color: #ccc0af;
+}
+
+.playu:hover {
+  color: red;
+}
+
+#image1 {
+    width: 100px;
+}
+      </style>
+	</body>
+</html>
