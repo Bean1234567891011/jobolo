@@ -8,12 +8,12 @@
 	<body>
         <div id = "first">
 		<center><h1>Welcome To Driving Simulator<br>Click Play To Begin</h1></center>
-        <center><button class="playgame"><a href="#" onClick="doSomething()"><p class="play"><u class = "playu">Play</u></p></a></button></center>
+        <center><button class="playgame"><a href="#" onClick="play()"><p class="play"><u class = "playu">Play</u></p></a></button></center>
         </div>
        <div id = "second">
             <h1>How To Play</h1>
             <h2>Desktop: Use arrow keys<br>Mobile:Use buttons<br>Get to the finish line without colliding with other objects.<br> Good Luck!</h2>
-            <center><button class="playgame"><a href="#" onClick="play()"><p class="play"><u class = "playu">Play</u></p></a></button></center>
+            <center><button class="playgame"><a href="#" onClick="play1()"><p class="play"><u class = "playu">Play</u></p></a></button></center>
         </div>
         <div id = "third">
             <script type="text/javascript">
@@ -75,12 +75,12 @@
      
         </div>
         <script type="text/javascript">
-	        function doSomething() {
+	        function play() {
 	        document.getElementById("first").style.display = "none";
                 document.getElementById("second").style.display = "block";
             }
 
-            function play () {
+            function play1() {
                  document.getElementById("third").style.display = "block";
                  document.getElementById("second").style.display = "none";
             }
